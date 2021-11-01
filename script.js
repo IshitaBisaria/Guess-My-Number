@@ -1,19 +1,4 @@
 `use strict`;
-
-// console.log(document.querySelector(`.message`).textContent);
-// document.querySelector(`.message`).textContent = `Correct Number!`;
-// console.log(document.querySelector(`.message`).textContent);
-
-// document.querySelector(`.number`).textContent = `14`;
-// document.querySelector(`.score`).textContent = `10`;
-
-// document.querySelector(`.guess`).value = `12`;
-// console.log(document.querySelector(`.guess`).value);
-
-
-
-
-// State Variables
 let secretNumber = Math.trunc(Math.random()*20) + 1;
 let highScore = 0;
 let score = 20;
@@ -22,6 +7,8 @@ const displayMessage = function (message) {
     document.querySelector(`.message`).textContent = message;
 }
 
+
+// Refactoring the code
 document.querySelector(`.check`).addEventListener(`click`,function() {
     const guess = Number(document.querySelector(`.guess`).value);
     if(!guess) {
